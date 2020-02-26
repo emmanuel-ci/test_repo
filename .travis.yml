@@ -1,0 +1,13 @@
+language: node_js
+script: true
+
+env:
+- FOO=foo
+- BAR=bar
+
+jobs:
+  include:
+  - stage: other
+    env: BAZ=baz
+  allow_failures:
+  - env: FOO=foo
